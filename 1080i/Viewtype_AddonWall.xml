@@ -34,14 +34,16 @@
                         </control>
                         <control type="image">
 							<top>211</top>
-                            <width>261</width>
+							<left>-7</left>
+                            <width>274</width>
                             <height>40</height>
                             <texture background="true">dialogs/shutdown_nofocus2.png</texture>
 							<colordiffuse>ffffffff</colordiffuse>
                         </control>
                         <control type="label">
-                            <top>211</top>
-                            <width>250</width>
+                            <top>210</top>
+							<left>8</left>
+                            <width>245</width>
                             <height>40</height>
                             <align>center</align>
                             <label>$INFO[ListItem.Label]</label>
@@ -66,14 +68,16 @@
 							</control>
 							<control type="image">
 								<top>211</top>
-								<width>261</width>
+								<left>-7</left>
+								<width>274</width>
 								<height>40</height>
 								<texture background="true">dialogs/shutdown_nofocus2.png</texture>
 								<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse> -->
 							</control>
 							<control type="label">
-								<top>211</top>
-								<width>250</width>
+								<top>210</top>
+								<left>8</left>
+								<width>245</width>
 								<height>40</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Label]</label>
@@ -583,7 +587,7 @@
                     </focusedlayout>
                     <itemlayout height="268" width="189" condition="Container.Content(movies) + Skin.HasSetting(usecases)">      			<!-- MOVIES INACTIVE WITH CASES -->
 					<control type="group">
-					<visible>[!Skin.HasSetting(Colorcases) + Skin.HasSetting(clearcases)]</visible>
+					<visible>Skin.HasSetting(clearcases)</visible>
 						<control type="image">
                             <left>4</left>
                             <top>12</top>
@@ -716,7 +720,7 @@
                     <control type="group">
                     <animation effect="zoom" center="90,134" start="100" end="140" time="160" tween="cubic" reversible="false" condition="Skin.HasSetting(InfoWallZoom)">Conditional</animation>
 						<control type="group">				
-						<visible>[!Skin.HasSetting(Colorcases) + Skin.HasSetting(clearcases)] + Skin.HasSetting(InfoWallZoom)</visible>
+						<visible>Skin.HasSetting(clearcases) + Skin.HasSetting(InfoWallZoom)</visible>
 							<control type="image">
 								<left>7</left>
 								<top>27</top>
@@ -758,7 +762,7 @@
                             </control>						
 						</control>
 						<control type="group">					
-						<visible>[!Skin.HasSetting(Colorcases) + Skin.HasSetting(clearcases)] + !Skin.HasSetting(InfoWallZoom)</visible>
+						<visible>Skin.HasSetting(clearcases) + !Skin.HasSetting(InfoWallZoom)</visible>
 							<control type="image">
                             <left>4</left>
                             <top>12</top>
